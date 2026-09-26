@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Adrix B2B Pricing — wholesale price per company for Shopify</title>
-<meta name="description" content="Give each B2B company its own wholesale price on Shopify Basic, Grow and Advanced, with price groups and volume breaks. Free.">
+<meta name="description" content="Give each B2B company its own wholesale price on Shopify Basic, Grow and Advanced, with price groups, volume breaks and branch rules. Free.">
 <meta name="theme-color" content="#081630">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://adrixhq.com/b2b-pricing/">
 <meta property="og:title" content="Adrix B2B Pricing">
-<meta property="og:description" content="Give each B2B company its own wholesale price on Shopify Basic, Grow and Advanced, with price groups and volume breaks. Free.">
+<meta property="og:description" content="Give each B2B company its own wholesale price on Shopify Basic, Grow and Advanced, with price groups, volume breaks and branch rules. Free.">
 <meta property="og:url" content="https://adrixhq.com/b2b-pricing/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,18 +28,25 @@
 </header>
 <main>
 <div class="hero">
-  <div class="wrap">
-    <span class="eyebrow">Adrix B2B Pricing · for Shopify · Free</span>
-    <h1>A wholesale price for every company. <span class="dim">No Plus plan.</span></h1>
-    <p class="lede">On Basic, Grow and Advanced, Shopify will not activate a catalog assigned to a company location, so you cannot give one named B2B customer their own price. Adrix B2B Pricing stores the rate on the company itself and applies it at checkout, for as many companies as you have. No upgrade to Shopify Plus, which starts at $2,300 a month.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="mailto:hello@adrixhq.com?subject=Adrix%20B2B%20Pricing">Ask about the app <span class="arrow">→</span></a>
-      <a class="btn" href="#how">How it works</a>
+  <div class="wrap hero-split">
+    <div>
+      <span class="eyebrow">Adrix B2B Pricing · for Shopify · Free</span>
+      <h1>A wholesale price for <span class="dim">every B2B company.</span></h1>
+      <p class="lede">Give each company its own rate on Shopify Basic, Grow and Advanced, with rates per product group, volume breaks and rules per branch. Applied in Shopify's own cart and checkout.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:hello@adrixhq.com?subject=Adrix%20B2B%20Pricing">Ask about the app <span class="arrow">→</span></a>
+        <a class="btn" href="#features">See the features</a>
+      </div>
     </div>
-    <div class="term" role="img" aria-label="Example pricing rule for one company">
-  <div class="term-bar"><i></i><i></i><i></i><span>adrix-b2b-pricing · company rule (example)</span></div>
-  <div class="term-body"><div class="prompt">company "Northwind Supply"</div><hr><div class="term-row"><span class="st ok">base</span><span class="code">every product</span><b>−20%</b></div><div class="term-row"><span class="st ok">group</span><span class="code">Tools</span><b>−25%</b></div><div class="term-row"><span class="st ok">break</span><span class="code">qty ≥ 50</span><b>−28%</b></div><div class="term-row"><span class="st warn">branch</span><span class="code">Retail outlet</span><b>full price</b></div></div>
-</div>
+    <div class="mock" role="img" aria-label="App screen: the company list"><div class="mock-bar"><i></i>Adrix B2B Pricing</div><div class="mock-body">
+<div class="mock-title">B2B pricing <span class="mbtns"><span class="mbtn">Price groups</span><span class="mbtn">Export a CSV</span></span></div>
+<div class="mock-card"><h4>Companies</h4><div class="msearch">Search companies</div>
+<table class="mtable"><tr><th>Company</th><th>Branches</th><th>Pricing</th></tr>
+<tr><td><a>Nordic Supply Co.</a></td><td>1</td><td><span class="mbadge ok">25%</span></td></tr>
+<tr><td><a>Summit Wholesale</a></td><td>1</td><td><span class="mbadge ok">20% · 2 groups</span></td></tr>
+<tr><td><a>Glacier Trading</a></td><td>1</td><td><span class="mbadge ok">15% · 2 breaks</span></td></tr>
+<tr><td><a>Harbour &amp; Co.</a></td><td>2</td><td><span class="mbadge ok">28%</span></td></tr>
+<tr><td><a>Ridgeway Retail</a></td><td>1</td><td><span class="mbadge">No pricing set</span></td></tr></table></div></div></div>
   </div>
 </div>
 
@@ -47,13 +54,102 @@
   <div class="wrap">
     <div class="section-head">
       <p class="label">The problem</p>
-      <h2>Shopify B2B stops at the fourth customer.</h2>
-      <p>Shopify opened B2B to every paid plan in April 2026, but outside Plus it will not activate a catalog for one company, and B2B markets share at most three active catalogs. These are the errors we got back on a Grow store.</p>
+      <h2>B2B is on your plan. Per-customer prices are not.</h2>
+      <p>Shopify opened B2B to Basic, Grow and Advanced in April 2026. Two limits follow, and we reproduced both on a Grow store.</p>
+    </div>
+    <div class="pains">
+      <div class="pain"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><h3>No catalog for one company</h3><p>A catalog assigned to a company location cannot be set to active on these plans, so no single customer gets their own price.</p></div>
+      <div class="pain"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg></span><h3>Three catalogs, shared</h3><p>B2B markets share at most three active catalogs: price levels for groups of customers, not a rate per customer.</p></div>
+      <div class="pain"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span><h3>The workarounds cost margin</h3><p>Put a customer on the wrong price level, turn them away, or hand-edit every order.</p></div>
     </div>
     <div class="term" role="img" aria-label="Errors Shopify returns on a Grow store">
-  <div class="term-bar"><i></i><i></i><i></i><span>Shopify Admin API · Grow plan (measured)</span></div>
-  <div class="term-body"><div class="prompt">activate catalog for company location "Northwind Supply · Main"</div><div class="term-row"><span class="st bad">UNPERMITTED_ENTITLEMENTS_DIRECT_CATALOG_ASSIGNMENT</span></div><div class="term-note">Catalogs assigned to company locations can't be set to active with your plan.</div><hr><div class="prompt">activate a 4th catalog for a B2B market</div><div class="term-row"><span class="st bad">B2B_CATALOG_LIMIT_REACHED</span></div><div class="term-note">Only 3 active catalogs can be assigned to active B2B markets.</div></div>
+  <div class="term-bar"><i></i><i></i><i></i><span>Shopify Admin API · Grow plan (measured 15 Sep 2026)</span></div>
+  <div class="term-body"><div class="prompt">activate a catalog for company location "Northwind Supply · Main"</div><div class="term-row"><span class="st bad">UNPERMITTED_ENTITLEMENTS_DIRECT_CATALOG_ASSIGNMENT</span></div><div class="term-note">Catalogs assigned to company locations can't be set to active with your plan.</div><hr><div class="prompt">activate a 4th catalog for a B2B market</div><div class="term-row"><span class="st bad">B2B_CATALOG_LIMIT_REACHED</span></div><div class="term-note">Only 3 active catalogs can be assigned to active B2B markets.</div></div>
 </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Features</p>
+      <h2>Everything a wholesale price list needs.</h2>
+      <p>Only buyers signed in to a company account get wholesale prices. Everyone else pays your normal price.</p>
+    </div>
+<div class="feature"><div class="copy"><p class="label">Per company</p><h3>Set a rate for each company</h3><p>Open a company, type its discount and save. There is no cap on how many companies you price.</p><ul><li>A default discount for everything they buy</li><li>Your own name for the discount line, such as "Dealer pricing"</li><li>Changes apply to the next cart, with no theme edits</li></ul></div><div><div class="mock" role="img" aria-label="App screen: editing a company's pricing"><div class="mock-bar"><i></i>Adrix B2B Pricing</div><div class="mock-body">
+<div class="mock-title">Summit Wholesale <span class="mbtn pri">Save</span></div>
+<div class="mock-card"><div class="mfield"><span>Default discount (%)</span><div class="box">20</div></div><div class="mfield"><span>Label shown to the buyer</span><div class="box">Dealer pricing</div><small>Buyers see this line in their cart.</small></div><div class="mfield"><span>Rates per product group</span><div class="box">hardware: 40
+apparel: 15</div><small>One group per line, as name: percentage.</small></div><div class="mfield"><span>Volume breaks</span><div class="box">10: 25
+50: 30</div><small>One break per line, as minimum quantity: percentage.</small></div></div></div></div></div></div>
+<div class="feature flip"><div class="copy"><p class="label">Preview</p><h3>See what the customer will pay</h3><p>Below the form, the app shows each product group and quantity band with its discount, calculated by the same function the cart runs.</p><ul><li>Check a rule before any buyer sees it</li><li>The same numbers checkout will use</li><li>A draft order in Shopify admin confirms it end to end</li></ul></div><div><div class="mock" role="img" aria-label="App screen: what this customer pays"><div class="mock-bar"><i></i>Adrix B2B Pricing</div><div class="mock-body">
+<div class="mock-card"><h4>What this customer pays</h4><div style="color:#616161">Calculated from the rules above, by the same function the cart uses.</div>
+<table class="mtable"><tr><th>Products</th><th>Quantity</th><th>Discount</th></tr>
+<tr><td>hardware</td><td>Any</td><td>40%</td></tr>
+<tr><td>apparel</td><td>Any</td><td>15%</td></tr>
+<tr><td>Products in no group</td><td>1–9</td><td>20%</td></tr>
+<tr><td></td><td>10–49</td><td>25%</td></tr>
+<tr><td></td><td>50+</td><td>30%</td></tr></table></div></div></div></div></div>
+<div class="feature"><div class="copy"><p class="label">Product groups</p><h3>Different rates for different products</h3><p>Turn your collections into price groups, then give each company a rate per group: tools at 40%, apparel at 15%.</p><ul><li>Up to 50 groups, built from collections</li><li>A group's rate is final: volume breaks never cut into a low-margin group</li><li>The app tells you when a product moves from one group to another</li></ul></div><div><div class="mock" role="img" aria-label="App screen: price groups"><div class="mock-bar"><i></i>Adrix B2B Pricing</div><div class="mock-body">
+<div class="mock-title">Price groups</div>
+<div class="mock-card"><h4>Apply a group to a collection</h4><div class="mfield"><span>Collection</span><div class="box">Hand tools  ▾</div></div><div class="mfield"><span>Group name</span><div class="box">hardware</div></div><div><span class="mbtn pri">Apply</span></div></div>
+<div class="mock-card"><h4>Groups in use</h4><table class="mtable"><tr><td>hardware</td><td style="text-align:right">42 products</td></tr><tr><td>apparel</td><td style="text-align:right">118 products</td></tr></table></div></div></div></div></div>
+<div class="feature flip"><div class="copy"><p class="label">Volume breaks</p><h3>Deeper discounts for bigger orders</h3><p>Add quantity breaks to any company. Each cart line gets the rate for the quantity ordered.</p><ul><li>Up to 20 breaks per rule</li><li>Only the highest break the quantity reaches applies</li><li>Works together with the default discount</li></ul></div><div><div class="mock" role="img" aria-label="App screen: volume breaks"><div class="mock-bar"><i></i>Adrix B2B Pricing</div><div class="mock-body"><div class="mock-title">Glacier Trading <span class="mbtn pri">Save</span></div><div class="mock-card"><div class="mfield"><span>Default discount (%)</span><div class="box">15</div></div><div class="mfield"><span>Volume breaks</span><div class="box">10: 25
+50: 35</div><small>One break per line, as minimum quantity: percentage. 20 breaks at most.</small></div></div><div class="mock-card"><table class="mtable"><tr><th>Quantity</th><th>Discount</th></tr><tr><td>1–9</td><td>15%</td></tr><tr><td>10–49</td><td>25%</td></tr><tr><td>50+</td><td>35%</td></tr></table></div></div></div></div></div>
+<div class="feature"><div class="copy"><p class="label">Branches</p><h3>Rules for each location</h3><p>A company with several locations can price each one differently, or exclude one entirely.</p><ul><li>A branch rule replaces the company rule</li><li>"Pays retail" for a customer's own retail outlet</li><li>Everything else inherits the company's pricing</li></ul></div><div><div class="mock" role="img" aria-label="App screen: a branch that pays retail"><div class="mock-bar"><i></i>Adrix B2B Pricing</div><div class="mock-body">
+<div class="mock-title">Harbour &amp; Co. · Harbour Retail Store <span class="mbtn pri">Save</span></div>
+<div class="mock-card"><div class="mcheck"><i></i><div><b>This branch pays retail</b><div style="color:#616161;font-size:12px">No discount, and no inheriting the company's pricing. For a wholesale customer's retail outlet.</div></div></div></div>
+<div class="mock-card"><h4>Branches</h4><table class="mtable"><tr><th>Branch</th><th>Pricing</th></tr>
+<tr><td>Head office</td><td><span class="mbadge">Company rule · 28%</span></td></tr>
+<tr><td>Harbour Retail Store</td><td><span class="mbadge">No discount</span></td></tr></table></div></div></div></div></div>
+<div class="feature flip"><div class="copy"><p class="label">Safeguards</p><h3>Warnings before a mistake costs money</h3><p>The app checks your rules as you type and says, in plain words, what would go wrong.</p><ul><li>Volume breaks that charge big orders more</li><li>Rates that stack on top of an existing Shopify catalog</li><li>The discount switched off, so carts pay retail</li></ul></div><div><div class="mock" role="img" aria-label="App screen: warnings before a mistake costs money"><div class="mock-bar"><i></i>Adrix B2B Pricing</div><div class="mock-body">
+<div class="mbanner crit"><b>Buying more earns less of a discount — almost certainly a typo</b><span>From 10 the discount is 25%, but from 50 it drops to 15%. A buyer ordering more would pay a higher unit price than one ordering less.</span></div>
+<div class="mbanner warn"><b>This customer already has Shopify catalog pricing — the rates below stack on top of it</b><span>30% here on a catalog already 20% off means the buyer pays 56% of retail, not 70%.</span></div>
+<div class="mbanner crit"><b>But carts are applying none of this right now</b><span>The app's discount is missing or turned off. Go to the company list to turn it back on.</span></div></div></div></div></div>
+<div class="feature"><div class="copy"><p class="label">CSV</p><h3>Bring every customer in at once</h3><p>Export all companies' pricing, edit the file in a spreadsheet and paste it back. You see every change before it is saved.</p><ul><li>Import up to 500 rows at a time</li><li>Column names are checked, so a deleted column cannot shift values</li><li>Nothing is written unless the preview still matches your store</li></ul></div><div><div class="mock" role="img" aria-label="App screen: importing pricing from CSV"><div class="mock-bar"><i></i>Adrix B2B Pricing</div><div class="mock-body">
+<div class="mock-title">Import pricing from CSV <span class="mbtn">Export CSV</span></div>
+<div class="mock-card"><div class="mfield"><span>CSV</span><div class="box">company_id,company_name,percent_off,label,groups,quantity_breaks
+3399614534,Wholesale Customer 4,37.5,Dealer pricing,tools:45,10:42;50:48</div></div></div>
+<div class="mock-card"><h4>What is about to change</h4><table class="mtable"><tr><th>Company</th><th>Now</th><th>After</th></tr>
+<tr><td>Wholesale Customer 4</td><td><span class="mbadge">No pricing set</span></td><td><span class="mbadge ok">37.5% · 1 group · 2 breaks</span></td></tr></table></div></div></div></div></div>
+<div class="feature flip"><div class="copy"><p class="label">Checkout</p><h3>Buyers see it in their cart</h3><p>Rates are applied by a Shopify Function inside Shopify's own cart and checkout, as a discount on each line.</p><ul><li>No theme code and no scripts on your storefront</li><li>Product pages keep showing your regular price</li><li>Retail customers are never touched</li></ul></div><div><div class="mock" role="img" aria-label="Storefront cart of a signed-in B2B buyer"><div class="mock-bar"><i></i>yourstore.com/cart</div><div class="mock-body">
+<div class="mock-title">Your cart <span style="font-weight:400;color:#616161;font-size:12px">Summit Wholesale</span></div>
+<div class="mock-card">
+<div class="cart-line"><div class="thumb"></div><div><div class="t">Torque wrench × 12</div><div class="d">Dealer pricing (−$192.00)</div></div><div><s>$480.00</s>$288.00</div></div>
+<div class="cart-line"><div class="thumb"></div><div><div class="t">Work gloves × 60</div><div class="d">Dealer pricing (−$108.00)</div></div><div><s>$360.00</s>$252.00</div></div>
+<div class="cart-sum"><div><span>Subtotal</span><span>$540.00</span></div><div class="tot"><span>Total</span><span>$540.00 USD</span></div></div></div></div></div></div></div>
+    <p class="mock-note">Screens are simplified from the app for this page.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Why Adrix B2B Pricing</p>
+      <h2>Built to be trusted with your prices.</h2>
+    </div>
+    <div class="why">
+      <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg></span><h3>Free</h3><p>No paid plan and no charge through Shopify.</p></div>
+      <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></span><h3>Runs inside checkout</h3><p>A Shopify Function computes the discount in Shopify's own checkout, with no network calls.</p></div>
+      <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></span><h3>No theme changes</h3><p>Nothing is added to your theme, so nothing breaks when you switch themes.</p></div>
+      <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><h3>No personal data</h3><p>The app stores no buyer data at all. Its only record is your store's session.</p></div>
+      <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg></span><h3>Leaves nothing behind</h3><p>One button clears every rule and group the app saved, before you uninstall.</p></div>
+      <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span><h3>A person answers</h3><p>Email the people who build the app. First reply within one business day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">How it works</p>
+      <h2>Price your first customer in a few minutes.</h2>
+    </div>
+    <ol class="steps">
+      <li><div><h3>Install from the Shopify App Store</h3><p>The app opens in your Shopify admin and lists your B2B companies.</p></div></li>
+      <li><div><h3>Set a company's rate</h3><p>Add group rates, volume breaks or branch rules if you need them, then save.</p></div></li>
+      <li><div><h3>Check it</h3><p>Read the preview table, or create a draft order for the company with "Apply all eligible automatic discounts" ticked.</p></div></li>
+      <li><div><h3>Bring in the rest by CSV</h3><p>Export, fill in your other companies, and import the file back.</p></div></li>
+    </ol>
   </div>
 </section>
 
@@ -61,67 +157,19 @@
   <div class="wrap">
     <div class="section-head">
       <p class="label">Compared</p>
-      <h2>What each option lets you do.</h2>
+      <h2>What you can do on Basic, Grow and Advanced.</h2>
     </div>
     <div class="prose" style="max-width:none">
       <div class="table-wrap"><table>
-        <thead><tr><th></th><th>Catalogs on Basic, Grow, Advanced</th><th>Shopify Plus</th><th>Adrix B2B Pricing</th></tr></thead>
+        <thead><tr><th></th><th>Shopify catalogs</th><th>With Adrix B2B Pricing</th></tr></thead>
         <tbody>
-          <tr><td>A price for one named company</td><td>No</td><td>Yes</td><td>Yes</td></tr>
-          <tr><td>How many priced customers</td><td>3 active catalogs, shared by B2B markets</td><td>Many catalogs</td><td>No cap on companies</td></tr>
-          <tr><td>Different rates by product group</td><td>Fixed prices per product in a price list</td><td>Fixed prices per product in a price list</td><td>Up to 50 groups, built from your collections</td></tr>
-          <tr><td>Cost</td><td>Your current plan</td><td>From $2,300/month<br><span style="color:var(--faint);font-size:13px">3-year term; $2,500 on 1 year</span></td><td><strong>Free</strong></td></tr>
+          <tr><td>A price for one named company</td><td>Not on these plans</td><td>Yes, for every company</td></tr>
+          <tr><td>Price levels</td><td>3 active catalogs, shared by B2B markets</td><td>One rule per company, and per branch</td></tr>
+          <tr><td>Different rates by product group</td><td>Fixed prices per product in a price list</td><td>Up to 50 groups, from your collections</td></tr>
         </tbody>
       </table></div>
-      <p class="fine">Shopify Plus prices from <a href="https://www.shopify.com/plus/pricing">shopify.com/plus/pricing</a>, checked 26 September 2026.</p>
+      <p class="fine">You can use both: a catalog for your base wholesale price, and this app for per-company rates on top. The app shows you when they stack.</p>
     </div>
-  </div>
-</section>
-
-<section id="how">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="label">Features</p>
-      <h2>Wholesale pricing that stays out of retail.</h2>
-      <p>Only buyers signed in to a company account get wholesale prices. Everyone else pays your normal price.</p>
-    </div>
-    <div class="grid">
-      <div class="cell"><h3>A rate per company</h3><p>Set a base discount for each B2B company, for as many companies as you have. No upgrade to Shopify Plus, which starts at $2,300 a month.</p></div>
-      <div class="cell"><h3>Rates per product group</h3><p>Build groups from your collections, so tools and consumables can sell to the same buyer at different rates.</p></div>
-      <div class="cell"><h3>Volume breaks</h3><p>Up to 20 quantity breaks per rule. Each cart line gets the rate for the quantity ordered.</p></div>
-      <div class="cell"><h3>Rules per branch</h3><p>Give one location of a company its own rate, or have it pay full price, such as the customer's own retail outlet.</p></div>
-      <div class="cell"><h3>Your own label</h3><p>Buyers see the discount as "Wholesale pricing", or a name you choose, such as "Trade price".</p></div>
-      <div class="cell"><h3>CSV in and out</h3><p>Export every company's pricing, edit it in a spreadsheet, and import up to 500 rows at a time.</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <p class="label">Example</p>
-      <h2>How one cart is priced.</h2>
-      <p>The most specific rule wins. A product group's rate is final for that group; volume breaks apply to everything else.</p>
-    </div>
-    <div class="term" role="img" aria-label="Example cart for Northwind Supply">
-  <div class="term-bar"><i></i><i></i><i></i><span>cart · Northwind Supply (example)</span></div>
-  <div class="term-body"><div class="prompt">rule: base −20% · group Tools −25% · from 50 units −28%</div><hr><div class="term-row"><span class="st ok">base</span><span class="code">Shop towels, 10 × $12.00</span><b>$9.60 each</b></div><div class="term-row"><span class="st ok">break</span><span class="code">Shop towels, 60 × $12.00</span><b>$8.64 each</b></div><div class="term-row"><span class="st ok">group</span><span class="code">Torque wrench, 60 × $40.00</span><b>$30.00 each</b></div><hr><div class="term-note" style="padding-left:0">Tools has its own rate, so the 50-unit break does not apply to it.</div></div>
-</div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <p class="label">Setup</p>
-      <h2>Price your first customer in a few minutes.</h2>
-    </div>
-    <ol class="steps">
-      <li><div><h3>Install from the Shopify App Store</h3><p>The app opens inside your Shopify admin and lists your B2B companies.</p></div></li>
-      <li><div><h3>Pick a company and set its rate</h3><p>Add group rates, volume breaks or branch rules if you need them.</p></div></li>
-      <li><div><h3>Bring the rest in by CSV</h3><p>Export, fill in the rates for your other companies, and import the file back.</p></div></li>
-      <li><div><h3>Buyers see it in the cart</h3><p>Pricing runs inside Shopify's own checkout as a Shopify Function. Nothing is added to your theme.</p></div></li>
-    </ol>
   </div>
 </section>
 
@@ -132,11 +180,12 @@
       <h2>Before you install.</h2>
     </div>
     <div class="faq">
-      <details><summary>Do I need Shopify Plus?</summary><p>No. The app is built for Basic, Grow and Advanced, where Shopify will not activate a catalog for a single company.</p></details>
-      <details><summary>Where do buyers see the wholesale price?</summary><p>In the cart and at checkout, as a discount on each line. Product pages keep showing your regular price.</p></details>
+      <details><summary>Which Shopify plans does it work on?</summary><p>Basic, Grow and Advanced, the plans where Shopify will not activate a catalog for a single company. You need Shopify's B2B features turned on, with your customers set up as companies.</p></details>
+      <details><summary>Where do buyers see the wholesale price?</summary><p>In the cart and at checkout, as a discount on each line, named "Wholesale pricing" or a label you choose. Product pages keep showing your regular price.</p></details>
       <details><summary>Does it change my product prices?</summary><p>No. Your products keep their prices. Rules are saved as metafields on your companies and products, and applied while the cart is calculated.</p></details>
+      <details><summary>Does it work on draft orders?</summary><p>Yes, when you tick "Apply all eligible automatic discounts" on the draft order. Without it Shopify applies no automatic discount at all.</p></details>
       <details><summary>I already use a catalog with a price list. What happens?</summary><p>The two stack: the app's rate comes off whatever the line already costs. 20% in a catalog plus 30% here means the buyer pays 56% of retail, not 50%. The app warns you on the company's screen when this applies.</p></details>
-      <details><summary>What happens when I uninstall?</summary><p>The app can remove every rule it saved before you uninstall, so nothing is left in your store. See the <a href="https://b2b-tier-pricing.web.app/privacy">privacy policy</a> for what we store.</p></details>
+      <details><summary>What happens when I uninstall?</summary><p>Shopify keeps an app's metafields after it is removed, so the app has a button that clears every rule and group it saved. Use it before uninstalling. See the <a href="https://b2b-tier-pricing.web.app/privacy">privacy policy</a>.</p></details>
       <details><summary>Is it really free?</summary><p>Yes. There is no paid plan and no charge through Shopify.</p></details>
     </div>
   </div>
@@ -145,7 +194,7 @@
 <section>
   <div class="wrap">
     <div class="callout">
-      <h2>Free, on every paid Shopify plan with B2B.</h2>
+      <h2>Give your next wholesale customer their own price.</h2>
       <p>Adrix B2B Pricing is on its way to the Shopify App Store. Questions about your setup? Write to us.</p>
       <div class="actions"><a class="btn btn-primary" href="mailto:hello@adrixhq.com?subject=Adrix%20B2B%20Pricing">hello@adrixhq.com <span class="arrow">→</span></a></div>
     </div>
