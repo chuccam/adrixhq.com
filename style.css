@@ -1,17 +1,17 @@
-/* Adrix — dark-first, one electric accent, Geist + Geist Mono.
+/* AdrixHQ — deep navy ground, mint accent (from the logo), Geist + Geist Mono.
    Tokens first; every color on the site comes from here. */
 :root {
-  --bg: #0a0a0b;
-  --surface: #111113;
-  --surface-2: #17171a;
-  --line: #222227;
-  --line-strong: #2e2e35;
-  --ink: #ededef;
-  --muted: #8b8b94;
-  --faint: #5c5c66;
-  --accent: #7c5cff;
-  --accent-ink: #b9a8ff;
-  --accent-glow: rgba(124, 92, 255, 0.28);
+  --bg: #081630;
+  --surface: #0d1d3b;
+  --surface-2: #132647;
+  --line: #1b2f52;
+  --line-strong: #274170;
+  --ink: #eef3fa;
+  --muted: #93a3bd;
+  --faint: #5d7091;
+  --accent: #4ecb9b;
+  --accent-ink: #7fe0bc;
+  --accent-glow: rgba(78, 203, 155, 0.22);
   --ok: #3dd68c;
   --warn: #f5a524;
   --bad: #f2555a;
@@ -34,7 +34,7 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
-::selection { background: var(--accent); color: #fff; }
+::selection { background: var(--accent); color: var(--bg); }
 
 .wrap {
   max-width: var(--max);
@@ -47,7 +47,7 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(10, 10, 11, 0.72);
+  background: rgba(8, 22, 48, 0.75);
   backdrop-filter: saturate(160%) blur(12px);
   -webkit-backdrop-filter: saturate(160%) blur(12px);
   border-bottom: 1px solid var(--line);
@@ -62,18 +62,10 @@ a { color: inherit; text-decoration: none; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-weight: 600;
-  font-size: 17px;
-  letter-spacing: -0.02em;
 }
-.logo svg { width: 22px; height: 22px; }
-.logo .hq {
-  font: 500 11px/1 var(--mono);
-  color: var(--muted);
-  border: 1px solid var(--line-strong);
-  border-radius: 4px;
-  padding: 3px 5px;
-}
+.logo svg { width: 28px; height: 28px; border-radius: 7px; box-shadow: 0 0 0 1px var(--line-strong); }
+.logo span { font: 700 19px/1 "Poppins", var(--sans); letter-spacing: -0.02em; }
+.logo b { font-weight: 700; color: var(--accent); }
 .nav { display: flex; gap: 4px; }
 .nav a {
   font-size: 14px;
@@ -172,11 +164,12 @@ h3 { font-size: 17px; letter-spacing: -0.015em; line-height: 1.3; }
 }
 .btn:hover { border-color: var(--faint); background: var(--surface-2); }
 .btn-primary {
-  background: var(--ink);
-  color: var(--bg);
-  border-color: var(--ink);
+  background: var(--accent);
+  color: #062016;
+  border-color: var(--accent);
+  font-weight: 600;
 }
-.btn-primary:hover { background: #fff; border-color: #fff; }
+.btn-primary:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
 .btn .arrow { transition: transform .15s; }
 .btn:hover .arrow { transform: translateX(3px); }
 
@@ -325,7 +318,7 @@ section { padding: 96px 0; border-bottom: 1px solid var(--line); }
 .prose p, .prose li { color: #c4c4cb; }
 .prose ul { padding-left: 20px; }
 .prose li { margin: 6px 0; }
-.prose a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(185, 168, 255, .4); }
+.prose a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(127, 224, 188, .4); }
 .prose strong { color: var(--ink); font-weight: 600; }
 .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); margin: 16px 0; }
 .prose table { width: 100%; border-collapse: collapse; font-size: 15px; }
