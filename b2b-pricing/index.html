@@ -43,19 +43,69 @@
   </div>
 </div>
 
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">The problem</p>
+      <h2>Shopify B2B stops at the fourth customer.</h2>
+      <p>Shopify opened B2B to every paid plan in April 2026, but outside Plus it will not activate a catalog for one company, and B2B markets share at most three active catalogs. These are the errors we got back on a Grow store.</p>
+    </div>
+    <div class="term" role="img" aria-label="Errors Shopify returns on a Grow store">
+  <div class="term-bar"><i></i><i></i><i></i><span>Shopify Admin API · Grow plan (measured)</span></div>
+  <div class="term-body"><div class="prompt">activate catalog for company location "Northwind Supply · Main"</div><div class="term-row"><span class="st bad">UNPERMITTED_ENTITLEMENTS_DIRECT_CATALOG_ASSIGNMENT</span></div><div class="term-note">Catalogs assigned to company locations can't be set to active with your plan.</div><hr><div class="prompt">activate a 4th catalog for a B2B market</div><div class="term-row"><span class="st bad">B2B_CATALOG_LIMIT_REACHED</span></div><div class="term-note">Only 3 active catalogs can be assigned to active B2B markets.</div></div>
+</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Compared</p>
+      <h2>What each option lets you do.</h2>
+    </div>
+    <div class="prose" style="max-width:none">
+      <div class="table-wrap"><table>
+        <thead><tr><th></th><th>Catalogs on Basic, Grow, Advanced</th><th>Shopify Plus</th><th>Adrix B2B Pricing</th></tr></thead>
+        <tbody>
+          <tr><td>A price for one named company</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>How many priced customers</td><td>3 active catalogs, shared by B2B markets</td><td>Many catalogs</td><td>No cap on companies</td></tr>
+          <tr><td>Different rates by product group</td><td>Fixed prices per product in a price list</td><td>Fixed prices per product in a price list</td><td>Up to 50 groups, built from your collections</td></tr>
+          <tr><td>Cost</td><td>Your current plan</td><td>Upgrade to Plus</td><td>Free</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+</section>
+
 <section id="how">
   <div class="wrap">
     <div class="section-head">
       <p class="label">Features</p>
       <h2>Wholesale pricing that stays out of retail.</h2>
-      <p>Only buyers signed in to a company account see wholesale prices. Everyone else pays your normal price.</p>
+      <p>Only buyers signed in to a company account get wholesale prices. Everyone else pays your normal price.</p>
     </div>
     <div class="grid">
-      <div class="cell"><h3>A rate per company</h3><p>Set a base discount for each B2B company. There is no cap on how many companies you price.</p></div>
-      <div class="cell"><h3>Rates per product group</h3><p>Group products from your collections, so tools and consumables can sell to the same buyer at different rates.</p></div>
-      <div class="cell"><h3>Volume breaks</h3><p>Each cart line gets the rate for the quantity ordered, worked out at checkout.</p></div>
-      <div class="cell"><h3>Rules per branch</h3><p>Give one location of a company its own rate, or have it pay full price.</p></div>
+      <div class="cell"><h3>A rate per company</h3><p>Set a base discount for each B2B company, for as many companies as you have.</p></div>
+      <div class="cell"><h3>Rates per product group</h3><p>Build groups from your collections, so tools and consumables can sell to the same buyer at different rates.</p></div>
+      <div class="cell"><h3>Volume breaks</h3><p>Up to 20 quantity breaks per rule. Each cart line gets the rate for the quantity ordered.</p></div>
+      <div class="cell"><h3>Rules per branch</h3><p>Give one location of a company its own rate, or have it pay full price, such as the customer's own retail outlet.</p></div>
+      <div class="cell"><h3>Your own label</h3><p>Buyers see the discount as "Wholesale pricing", or a name you choose, such as "Trade price".</p></div>
+      <div class="cell"><h3>CSV in and out</h3><p>Export every company's pricing, edit it in a spreadsheet, and import up to 500 rows at a time.</p></div>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Example</p>
+      <h2>How one cart is priced.</h2>
+      <p>The most specific rule wins. A product group's rate is final for that group; volume breaks apply to everything else.</p>
+    </div>
+    <div class="term" role="img" aria-label="Example cart for Northwind Supply">
+  <div class="term-bar"><i></i><i></i><i></i><span>cart · Northwind Supply (example)</span></div>
+  <div class="term-body"><div class="prompt">rule: base −20% · group Tools −25% · from 50 units −28%</div><hr><div class="term-row"><span class="st ok">base</span><span class="code">Shop towels, 10 × $12.00</span><b>$9.60 each</b></div><div class="term-row"><span class="st ok">break</span><span class="code">Shop towels, 60 × $12.00</span><b>$8.64 each</b></div><div class="term-row"><span class="st ok">group</span><span class="code">Torque wrench, 60 × $40.00</span><b>$30.00 each</b></div><hr><div class="term-note" style="padding-left:0">Tools has its own rate, so the 50-unit break does not apply to it.</div></div>
+</div>
   </div>
 </section>
 
@@ -67,10 +117,27 @@
     </div>
     <ol class="steps">
       <li><div><h3>Install from the Shopify App Store</h3><p>The app opens inside your Shopify admin and lists your B2B companies.</p></div></li>
-      <li><div><h3>Pick a company and set its rate</h3><p>Add group rates or volume breaks if you need them.</p></div></li>
-      <li><div><h3>Bring the rest in by CSV</h3><p>Export every company's pricing to a CSV file, edit it in a spreadsheet, and import it back.</p></div></li>
-      <li><div><h3>Leave nothing behind</h3><p>Pricing lives in metafields on your own companies and products. The app can remove all of it before you uninstall.</p></div></li>
+      <li><div><h3>Pick a company and set its rate</h3><p>Add group rates, volume breaks or branch rules if you need them.</p></div></li>
+      <li><div><h3>Bring the rest in by CSV</h3><p>Export, fill in the rates for your other companies, and import the file back.</p></div></li>
+      <li><div><h3>Buyers see it in the cart</h3><p>Pricing runs inside Shopify's own checkout as a Shopify Function. Nothing is added to your theme.</p></div></li>
     </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">FAQ</p>
+      <h2>Before you install.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Do I need Shopify Plus?</summary><p>No. The app is built for Basic, Grow and Advanced, where Shopify will not activate a catalog for a single company.</p></details>
+      <details><summary>Where do buyers see the wholesale price?</summary><p>In the cart and at checkout, as a discount on each line. Product pages keep showing your regular price.</p></details>
+      <details><summary>Does it change my product prices?</summary><p>No. Your products keep their prices. Rules are saved as metafields on your companies and products, and applied while the cart is calculated.</p></details>
+      <details><summary>I already use a catalog with a price list. What happens?</summary><p>The two stack: the app's rate comes off whatever the line already costs. 20% in a catalog plus 30% here means the buyer pays 56% of retail, not 50%. The app warns you on the company's screen when this applies.</p></details>
+      <details><summary>What happens when I uninstall?</summary><p>The app can remove every rule it saved before you uninstall, so nothing is left in your store. See the <a href="https://b2b-tier-pricing.web.app/privacy">privacy policy</a> for what we store.</p></details>
+      <details><summary>Is it really free?</summary><p>Yes. There is no paid plan and no charge through Shopify.</p></details>
+    </div>
   </div>
 </section>
 
