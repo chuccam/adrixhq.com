@@ -37,7 +37,7 @@ Copy these from an existing page; never hand-write a variant.
 
 - `<title>`: "Page — Adrix" or "Product — what it does for Shopify".
 - Privacy link in footers points to the privacy policy of the app the site is selling
-  (currently `https://b2b-tier-pricing.web.app/privacy`).
+  (currently `https://b2b.adrixhq.com/privacy`).
 - Contact is always `hello@adrixhq.com`.
 
 ## 4. Product page structure
