@@ -468,7 +468,8 @@ a.app-mini .more { margin-top: 16px; }
 /* storefront cart */
 .mock.cart { font-size: 13.5px; }
 .cart-line { display: grid; grid-template-columns: 44px 1fr auto; gap: 12px; align-items: center; }
-.cart-line .thumb { width: 44px; height: 44px; border-radius: 8px; background: linear-gradient(135deg, #dfe6ee, #c9d3de); }
+.cart-line .thumb { width: 44px; height: 44px; }
+.cart-line .thumb svg { width: 44px; height: 44px; display: block; }
 .cart-line .t { font-weight: 550; }
 .cart-line .d { color: #1a7f4b; font-size: 12px; }
 .cart-line s { color: var(--m-muted); font-size: 12px; margin-right: 6px; }
