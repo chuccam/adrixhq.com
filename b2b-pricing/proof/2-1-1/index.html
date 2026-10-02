@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review note 2.1.1 — Adrix B2B Pricing</title>
+<meta name="description" content="Why the App Store review cart showed no wholesale discount, and how to test it with a B2B buyer.">
+<meta name="theme-color" content="#081630">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://adrixhq.com/b2b-pricing/proof/2-1-1/">
+<meta property="og:title" content="Adrix B2B Pricing: review note 2.1.1">
+<meta property="og:description" content="Why the App Store review cart showed no wholesale discount, and how to test it with a B2B buyer.">
+<meta property="og:url" content="https://adrixhq.com/b2b-pricing/proof/2-1-1/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&family=Poppins:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body><header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#152b55"/><path d="M44 18h16l28 62H72z" fill="#4ecb9b"/><path d="M40 18h16L28 80H12z" fill="#fff"/><path d="M44 18h16l9 20H53z" fill="#fff"/><path d="M42 43h16v3.5a2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0z" fill="#4ecb9b"/><path d="M50 55l7 7h-4.5v10h-5V62H43z" fill="#4ecb9b"/></svg><span>Adrix<b>HQ</b></span></a>
+    <nav class="nav">
+      <a href="/apps/">Apps</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap page">
+    <article class="prose">
+      <span class="eyebrow">App Store review · 2.1.1</span>
+<h1>Why the review cart showed no wholesale discount</h1>
+      <p class="meta">Adrix B2B Pricing · October 1, 2026</p>
+
+      <p>The cart had no B2B company attached, so there was no company rate to apply. The discount itself works: below is what our function received on the review store, and the same pricing in the cart and checkout of a buyer who is signed in as a company contact.</p>
+
+      <h2>What the function received on the review store</h2>
+      <p>Shopify runs the app&rsquo;s discount function whenever a cart changes. On the review store it ran 51 times on September 29, and every run received <code>buyerIdentity.purchasingCompany: null</code>, or no buyer identity at all. A cart without a purchasing company is a retail cart, and the app leaves retail prices alone, so each run correctly returned no discount.</p>
+      <p><img src="function-input.png" alt="Function run on the review store, September 29 at 11:12 pm: the input shows buyerIdentity.purchasingCompany as null" width="875" height="1371" loading="lazy"></p>
+      <p class="fine">Dev Dashboard → Adrix B2B Pricing → Logs, one of the 51 runs. The store&rsquo;s domain and ID are blurred.</p>
+
+      <h2>When Shopify attaches a company to a cart</h2>
+      <p>Shopify B2B sends a cart as a company&rsquo;s only when both of these hold:</p>
+      <ol>
+        <li>The store uses <b>customer accounts</b>, not legacy customer accounts (Settings → Customer accounts). Shopify does not support B2B buyers on legacy accounts.</li>
+        <li>The customer signs in as a <b>contact of the company who has a role at one of its locations</b>: <b>Ordering only</b> or <b>Location admin</b>. Signing in with an email that has no role at a location is a retail sign-in.</li>
+      </ol>
+      <p>Otherwise the buyer shops as a retail customer and Shopify sends the cart without a company. No app can apply company pricing to that cart.</p>
+
+      <h2>The same pricing for a contact with a role</h2>
+      <p>Our Grow demo store, company Summit Wholesale at 20% with the label &ldquo;Partner pricing&rdquo;, buyer signed in as its contact with the Ordering only role. Ten snowboards at $749.95 cost $599.96 each, and checkout shows total savings of $1,499.90.</p>
+      <p><img src="cart.png" alt="Cart: 10 × The Collection Snowboard: Liquid, $749.95 each struck through, $599.96 each, labelled Partner pricing, subtotal $5,999.60" width="470" height="982" loading="lazy"></p>
+      <p><img src="checkout.png" alt="Checkout for Summit Wholesale: total due later $5,999.60, total savings $1,499.90" width="604" height="798" loading="lazy"></p>
+
+      <h2>How to test it</h2>
+      <ol>
+        <li>In the app, open a company and set a default discount, for example 20%.</li>
+        <li>Check Settings → Customer accounts is set to customer accounts, not legacy.</li>
+        <li>In Shopify admin, go to Customers → Companies → that company, add a customer as a contact, and give them the role <b>Ordering only</b> at a location.</li>
+        <li>Sign in to the storefront as that customer (choose the location if Shopify asks) and add a product. The cart and checkout show the discount with the company&rsquo;s label.</li>
+        <li>Or, in Shopify admin, create a draft order for that company and tick <b>Apply all eligible automatic discounts</b>. Without that box Shopify applies no automatic discount to draft orders.</li>
+      </ol>
+
+      <h2>What we changed in the app</h2>
+      <p>The app now names both causes on screen, so a merchant, or a reviewer, sees why a rate is not reaching a cart before testing one:</p>
+      <ul>
+        <li>On a store that uses legacy customer accounts, the company list and every company screen say <b>&ldquo;B2B buyers cannot sign in to this store yet&rdquo;</b>, with a link to Settings → Customer accounts.</li>
+        <li>On a company none of whose contacts can order, the company screen says <b>&ldquo;Nobody can buy as [company] yet&rdquo;</b>, with a link to the company in Shopify admin.</li>
+      </ul>
+
+      <p>Questions: <a href="mailto:hello@adrixhq.com">hello@adrixhq.com</a></p>
+    </article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Adrix Studio</span>
+    <nav>
+      <a href="/apps/">Apps</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+      <a href="/privacy/hs-duty-check/">Privacy</a>
+      <a href="mailto:hello@adrixhq.com">hello@adrixhq.com</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
