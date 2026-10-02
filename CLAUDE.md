@@ -20,7 +20,11 @@ Read this before changing any page. The rules exist because each one was broken 
   - Status: `--ok`, `--warn`, `--bad`. Red means a real problem, never decoration.
 - Type: Geist (text), Geist Mono (labels, code, terminal), Poppins 700 (logo only).
   Loaded from Google Fonts in each page's `<head>`; no other fonts.
-- Dark only (`color-scheme: dark`). No light theme.
+- Dark (`color-scheme: dark`) on every page except the home page. The home page uses the
+  light theme: `<body class="light">` redefines the tokens (off-white `--bg`, navy `--ink`,
+  forest-green `--accent`, `--max` 1200px) in the `.light` block of `style.css`. Its header
+  adds a "View app" button and its footer adds the wordmark. Do not add a light variant to
+  other pages unless asked.
 
 ## 2. What the site is for
 

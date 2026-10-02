@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Adrix — Shopify apps for B2B merchants</title>
 <meta name="description" content="Adrix builds focused Shopify apps for merchants who sell wholesale.">
-<meta name="theme-color" content="#081630">
+<meta name="theme-color" content="#f7f7f4">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://adrixhq.com/">
 <meta property="og:title" content="Adrix">
@@ -16,79 +16,141 @@
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&family=Poppins:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
-<body><header class="site-header">
+<body class="light"><a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
   <div class="wrap">
     <a class="logo" href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#152b55"/><path d="M44 18h16l28 62H72z" fill="#4ecb9b"/><path d="M40 18h16L28 80H12z" fill="#fff"/><path d="M44 18h16l9 20H53z" fill="#fff"/><path d="M42 43h16v3.5a2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0z" fill="#4ecb9b"/><path d="M50 55l7 7h-4.5v10h-5V62H43z" fill="#4ecb9b"/></svg><span>Adrix<b>HQ</b></span></a>
-    <nav class="nav">
+    <nav class="nav" aria-label="Main">
       <a href="/apps/">Apps</a>
       <a href="/about/">About</a>
       <a href="/support/">Support</a>
     </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="/b2b-pricing/">View app<span class="sr-only">: Adrix B2B Pricing</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
   </div>
 </header>
-<main>
-<div class="hero">
+<main id="main">
+<div class="home-hero">
   <div class="wrap">
-    <span class="eyebrow">Shopify apps for B2B merchants</span>
-    <h1>Small apps for the <span class="dim">expensive</span> details.</h1>
-    <p class="lede">We build focused tools for merchants who sell to other businesses: the parts of wholesale that quietly cost money when they go wrong.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="/b2b-pricing/">See Adrix B2B Pricing <span class="arrow">→</span></a>
-      <a class="btn" href="mailto:hello@adrixhq.com">Get in touch</a>
+    <div>
+      <p class="label">Shopify B2B apps</p>
+      <h1><span>Wholesale pricing.</span> <span>Set for each company.</span></h1>
+      <p class="lede">Manage company discounts, product groups and volume pricing in one place.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/b2b-pricing/">Explore B2B Pricing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a class="btn" href="#how">See how it works</a>
+      </div>
+      <p class="plans">Made for Shopify Basic, Grow and Advanced. Free.</p>
     </div>
-    <div class="term" role="img" aria-label="Example pricing rule for one company">
-  <div class="term-bar"><i></i><i></i><i></i><span>adrix-b2b-pricing · company rule (example)</span></div>
-  <div class="term-body"><div class="prompt">company "Summit Wholesale"</div><hr><div class="term-row"><span class="st ok">base</span><span class="code">every product</span><b>−20%</b></div><div class="term-row"><span class="st ok">group</span><span class="code">hardware</span><b>−40%</b></div><div class="term-row"><span class="st ok">break</span><span class="code">qty ≥ 50</span><b>−30%</b></div><div class="term-row"><span class="st warn">branch</span><span class="code">Retail outlet</span><b>full price</b></div></div>
-</div>
+
+    <div class="screen" role="img" aria-label="Example interface of Adrix B2B Pricing: Summit Wholesale gets a 20% default discount, 40% on hardware, 15% on apparel, and volume breaks of 25% from 10 units and 30% from 50.">
+      <div class="screen-bar"><span class="dots"><i></i><i></i><i></i></span><span>Example interface</span></div>
+      <div class="screen-body">
+        <div class="screen-side">
+          <div class="app-name"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#152b55"/><path d="M44 18h16l28 62H72z" fill="#4ecb9b"/><path d="M40 18h16L28 80H12z" fill="#fff"/><path d="M44 18h16l9 20H53z" fill="#fff"/></svg>Adrix B2B Pricing</div>
+          <ul class="screen-nav">
+            <li class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg>Companies</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4z"/><circle cx="7.5" cy="7.5" r="1"/></svg>Price groups</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Export a CSV</li>
+          </ul>
+        </div>
+        <div class="screen-main">
+          <div class="crumb">Companies › Summit Wholesale</div>
+          <div class="screen-title"><b>Summit Wholesale</b><span class="badge">20% · 2 groups · 2 breaks</span></div>
+          <div class="panel">
+            <div class="frow"><div><b>Default discount (%)</b></div><div class="field">20</div></div>
+            <div class="frow"><div><b>Label shown to the buyer</b><small>Buyers see this line in their cart.</small></div><div class="field">Dealer pricing</div></div>
+            <div class="frow"><div><b>Rates per product group</b><small>One group per line, as name: percentage.</small></div><div class="field">hardware: 40
+apparel: 15</div></div>
+            <div class="frow"><div><b>Volume breaks</b><small>One break per line, as minimum quantity: percentage.</small></div><div class="field">10: 25
+50: 30</div></div>
+          </div>
+          <div class="panel preview">
+            <b>What this customer pays</b>
+            <small>Calculated from the rules above, by the same function the cart uses.</small>
+            <table>
+              <tr><th>Products</th><th>Quantity</th><th>Discount</th></tr>
+              <tr><td>hardware</td><td>Any</td><td>40%</td></tr>
+              <tr><td>apparel</td><td>Any</td><td>15%</td></tr>
+              <tr><td>Products in no group</td><td>1–9</td><td>20%</td></tr>
+              <tr><td></td><td>10–49</td><td>25%</td></tr>
+              <tr><td></td><td>50+</td><td>30%</td></tr>
+            </table>
+          </div>
+          <div class="screen-actions"><span class="sbtn">Save</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<section id="apps">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="label">Apps</p>
-      <h2>One job each, done properly.</h2>
-      <p>Each app solves a single expensive problem, and shows its sources.</p>
+<section class="band" id="features">
+  <div class="wrap split-2">
+    <div>
+      <p class="label">B2B Pricing</p>
+      <h2>One app. Clear control over your B2B prices.</h2>
+      <ul class="feat-list">
+        <li><span class="ico-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><h3>Company pricing</h3><p>Give each B2B company its own discount, and set a different rule for any of its branches.</p></div></li>
+        <li><span class="ico-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4z"/><circle cx="7.5" cy="7.5" r="1"/></svg></span><div><h3>Product groups</h3><p>Turn collections into price groups, up to 50, and give each company a rate per group.</p></div></li>
+        <li><span class="ico-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-5M10 20V11M15 20V7M20 20V3"/></svg></span><div><h3>Volume breaks</h3><p>Give bigger orders a deeper discount. Each cart line gets the rate for the quantity ordered.</p></div></li>
+      </ul>
     </div>
-    <a class="app-card" href="/b2b-pricing/">
-      <div>
-        <span class="tag">Free</span>
-        <h3>Adrix B2B Pricing</h3>
-        <p>Give each B2B company its own wholesale price on Shopify Basic, Grow and Advanced, with rates per product group, volume breaks and rules per branch.</p>
-        <span class="more">Learn more →</span>
+
+    <div class="price-card">
+      <div class="price-card-head"><h3 id="pricing-title">Product pricing</h3><span class="pill">Example</span></div>
+      <div class="price-scroll">
+        <table class="price-table" aria-labelledby="pricing-title">
+          <thead><tr><th scope="col">Product</th><th scope="col">Regular price</th><th scope="col">Summit Wholesale</th></tr></thead>
+          <tbody>
+            <tr><td><div class="prod"><svg class="thumb" viewBox="0 0 44 44" aria-hidden="true"><rect class="bg" width="44" height="44" rx="6"/><rect class="md" x="4" y="15.2" width="5" height="1.6" rx=".8"/><rect class="md" x="8" y="13.5" width="5" height="5" rx="1"/><rect class="dk" x="12" y="11" width="19" height="10" rx="3"/><rect class="gr" x="28" y="12" width="6" height="8" rx="2"/><path class="dk" d="M18 20h8l-2 11h-7z"/><rect class="md" x="17.5" y="22" width="2" height="4" rx="1"/><rect class="gr" x="14" y="30" width="15" height="6" rx="1.5"/></svg><div><b>Cordless Drill 18V</b><small>SKU DR-018</small></div></div></td><td>$120.00</td><td class="net"><b>$72.00</b><small>hardware · 40%</small></td></tr>
+            <tr><td><div class="prod"><svg class="thumb" viewBox="0 0 44 44" aria-hidden="true"><rect class="bg" width="44" height="44" rx="6"/><path class="ln" d="M16 14v-3.5h12V14"/><rect class="dk" x="8" y="14" width="28" height="20" rx="2.5"/><rect class="md" x="8" y="20" width="28" height="1.5"/><rect class="gr" x="19.5" y="18.5" width="5" height="5" rx="1"/></svg><div><b>Toolbox Pro</b><small>SKU TB-001</small></div></div></td><td>$80.00</td><td class="net"><b>$48.00</b><small>hardware · 40%</small></td></tr>
+            <tr><td><div class="prod"><svg class="thumb" viewBox="0 0 44 44" aria-hidden="true"><rect class="bg" width="44" height="44" rx="6"/><path class="yl" d="M9 29a13 13 0 0 1 26 0z"/><rect class="hl" x="20.5" y="16" width="3" height="13"/><rect class="yl" x="6" y="28" width="32" height="4" rx="2"/></svg><div><b>Safety Helmet</b><small>SKU SH-100</small></div></div></td><td>$25.00</td><td class="net"><b>$20.00</b><small>default · 20%</small></td></tr>
+            <tr><td><div class="prod"><svg class="thumb" viewBox="0 0 44 44" aria-hidden="true"><rect class="bg" width="44" height="44" rx="6"/><rect class="dk" x="13" y="12" width="4" height="14" rx="2"/><rect class="dk" x="17.5" y="9" width="4" height="17" rx="2"/><rect class="dk" x="22" y="10" width="4" height="16" rx="2"/><rect class="dk" x="26.5" y="13" width="4" height="13" rx="2"/><rect class="dk" x="28" y="20" width="4" height="11" rx="2" transform="rotate(35 30 25.5)"/><rect class="dk" x="13" y="20" width="17.5" height="12" rx="3"/><rect class="gr" x="14" y="31" width="15.5" height="5" rx="1"/></svg><div><b>Work Gloves</b><small>SKU WG-200</small></div></div></td><td>$12.00</td><td class="net"><b>$10.20</b><small>apparel · 15%</small></td></tr>
+            <tr><td><div class="prod"><svg class="thumb" viewBox="0 0 44 44" aria-hidden="true"><rect class="bg" width="44" height="44" rx="6"/><path class="kd" d="M33 18l5-6v16l-5 6z"/><path class="kr" d="M7 18l5-6h26l-5 6z"/><rect class="kr" x="7" y="18" width="26" height="16"/><rect class="wh" x="11" y="22" width="15" height="8" rx="1"/><rect class="dk" x="13.5" y="24" width="1.6" height="4.5"/><rect class="dk" x="12.5" y="24" width="3.6" height="1.2"/><rect class="dk" x="18.2" y="24" width="1.6" height="4.5"/><rect class="dk" x="17.2" y="24" width="3.6" height="1.2"/><rect class="dk" x="22.9" y="24" width="1.6" height="4.5"/><rect class="dk" x="21.9" y="24" width="3.6" height="1.2"/></svg><div><b>Metal Screws (Box 100)</b><small>SKU MS-100</small></div></div></td><td>$18.00</td><td class="net"><b>$10.80</b><small>hardware · 40%</small></td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="term" role="img" aria-label="Example pricing rule for one company">
-  <div class="term-bar"><i></i><i></i><i></i><span>company rule (example)</span></div>
-  <div class="term-body"><div class="prompt">company "Summit Wholesale"</div><hr><div class="term-row"><span class="st ok">base</span><span class="code">every product</span><b>−20%</b></div><div class="term-row"><span class="st ok">group</span><span class="code">hardware</span><b>−40%</b></div><div class="term-row"><span class="st ok">break</span><span class="code">qty ≥ 50</span><b>−30%</b></div><div class="term-row"><span class="st warn">branch</span><span class="code">Retail outlet</span><b>full price</b></div></div>
-</div>
-    </a>
+      <p class="table-note">Unit prices for Summit Wholesale at a quantity of 1–9, as the cart and checkout apply them. Product pages keep showing the regular price.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="how">
+  <div class="wrap">
+    <p class="label">How it works</p>
+    <h2>From company to checkout.</h2>
+    <ol class="flow">
+      <li><span class="ico-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg></span><h3>Choose a company</h3><p>Open one of your Shopify B2B companies. The app lists them all inside your Shopify admin.</p><svg class="flow-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></li>
+      <li><span class="ico-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M16 13H8M16 17H8M10 9H8"/></svg></span><h3>Set pricing rules</h3><p>Add a default discount, rates per product group, volume breaks or branch rules, then save.</p><svg class="flow-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></li>
+      <li><span class="ico-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg></span><h3>Preview the price</h3><p>Check what the company pays before any buyer sees it. Buyers get that price in the cart and at checkout.</p></li>
+    </ol>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="section-head">
-      <p class="label">Principles</p>
-      <h2>How we build.</h2>
-    </div>
-    <div class="grid">
-      <div class="cell"><span class="num">01</span><h3>See it before it applies</h3><p>Our apps show what a change will do before it is saved, and warn you when a setting would cost you money.</p></div>
-      <div class="cell"><span class="num">02</span><h3>Say what it really does</h3><p>Every limit we state is the limit the code enforces. When something is not measured yet, we say so.</p></div>
-      <div class="cell"><span class="num">03</span><h3>Minimal data</h3><p>We ask for the fewest permissions the job needs and delete your data when you uninstall.</p></div>
+    <div class="cta">
+      <div>
+        <h2>Take a closer look at B2B Pricing.</h2>
+        <p>Company rates, price groups, volume breaks and branch rules, shown with the app's own screens. The app is free.</p>
+      </div>
+      <a class="btn btn-primary" href="/b2b-pricing/">Explore the app<span class="sr-only">: Adrix B2B Pricing</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <span>© 2026 Adrix Studio</span>
-    <nav>
+    <div>
+      <a class="logo" href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#152b55"/><path d="M44 18h16l28 62H72z" fill="#4ecb9b"/><path d="M40 18h16L28 80H12z" fill="#fff"/><path d="M44 18h16l9 20H53z" fill="#fff"/><path d="M42 43h16v3.5a2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0z" fill="#4ecb9b"/><path d="M50 55l7 7h-4.5v10h-5V62H43z" fill="#4ecb9b"/></svg><span>Adrix<b>HQ</b></span></a>
+      <span class="copy">© 2026 Adrix Studio</span>
+    </div>
+    <nav aria-label="Footer">
       <a href="/apps/">Apps</a>
       <a href="/about/">About</a>
       <a href="/support/">Support</a>
       <a href="https://b2b.adrixhq.com/privacy">Privacy</a>
-      <a href="mailto:hello@adrixhq.com">hello@adrixhq.com</a>
     </nav>
+    <a class="mail" href="mailto:hello@adrixhq.com">hello@adrixhq.com</a>
   </div>
 </footer>
 </body>
