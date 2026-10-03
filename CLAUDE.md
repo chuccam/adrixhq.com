@@ -15,16 +15,15 @@ Read this before changing any page. The rules exist because each one was broken 
   Do not redraw it per page; copy the header from an existing page.
 - Colours: only the tokens at the top of `style.css`. **Never write a hex value in a
   page**, except inside `.mock` screens, which imitate Shopify's light admin on purpose.
-  - Ground `--bg #081630`, cards `--surface`, lines `--line`.
-  - Accent mint `--accent #4ecb9b` for primary buttons, checkmarks, links (`--accent-ink`).
+  - Ground off-white `--bg #f7f7f4`, text navy `--ink`, cards `--surface`, lines `--line`.
+  - Accent forest green `--accent #1d5c3c` for primary buttons, checkmarks; `--accent-ink`
+    for labels and links; `--accent-soft` for icon tiles and the call-to-action band.
   - Status: `--ok`, `--warn`, `--bad`. Red means a real problem, never decoration.
-- Type: Geist (text), Geist Mono (labels, code, terminal), Poppins 700 (logo only).
+- Type: Geist (text and labels), Geist Mono (code, terminal, small data keys), Poppins 700
+  (logo only).
   Loaded from Google Fonts in each page's `<head>`; no other fonts.
-- Dark (`color-scheme: dark`) on every page except the home page. The home page uses the
-  light theme: `<body class="light">` redefines the tokens (off-white `--bg`, navy `--ink`,
-  forest-green `--accent`, `--max` 1200px) in the `.light` block of `style.css`. Its header
-  adds a "View app" button and its footer adds the wordmark. Do not add a light variant to
-  other pages unless asked.
+- Light only (`color-scheme: light`), no dark theme. Thin grey borders, soft shadows,
+  8px radius; no gradients, glows or decorative blobs.
 
 ## 2. What the site is for
 
@@ -35,8 +34,9 @@ from anywhere until they are ready to install; their pages may stay at their URL
 ## 3. Page skeleton
 
 Every page: same `<head>` block (charset, viewport, title, description, theme-color
-`#081630`, favicon, canonical, og:*, fonts, `/style.css`), same header (logo + Apps ·
-About · Support), same footer (© Adrix Studio · Apps · About · Support · Privacy · email).
+`#f7f7f4`, favicon, canonical, og:*, fonts, `/style.css`), same header (skip link, logo, Apps ·
+About · Support, "View app" button), same footer (logo with © Adrix Studio · Apps · About ·
+Support · Privacy · email). `<main id="main">` so the skip link lands.
 Copy these from an existing page; never hand-write a variant.
 
 - `<title>`: "Page — Adrix" or "Product — what it does for Shopify".
@@ -90,9 +90,11 @@ A product page follows this order (see `b2b-pricing/index.html`):
 
 ## 7. Layout and responsiveness
 
-- Content width `--max` 1120px inside `.wrap`; sections separated by the `section` border.
-- Breakpoints already in `style.css`: 960px (hero stacks), 900px (feature rows stack),
-  860px (grids go single column). New components get a rule at one of these.
+- Content width `--max` 1200px inside `.wrap`. Each `main > section` opens with a divider as
+  wide as the content; give a call-to-action section `class="plain"` to drop it.
+- Breakpoints already in `style.css`: 960px (heroes and two-column blocks stack), 900px
+  (feature rows stack), 860px (grids go single column), 760px (phone: header wraps,
+  16px gutter). New components get a rule at one of these.
 - Check every changed page in a browser at desktop width before pushing, and scroll the
   whole page; the terminal blocks and tables are where overflow shows up first.
 

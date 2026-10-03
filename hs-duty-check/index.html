@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HS Duty Check — HS codes and duty reconciliation for Shopify</title>
 <meta name="description" content="Scan your Shopify catalog for missing or outdated HS codes, get cited US HTS codes, and compare duties collected at checkout with duties actually billed.">
-<meta name="theme-color" content="#081630">
+<meta name="theme-color" content="#f7f7f4">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://adrixhq.com/hs-duty-check/">
 <meta property="og:title" content="HS Duty Check">
@@ -16,24 +16,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&family=Poppins:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
-<body><header class="site-header">
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
   <div class="wrap">
     <a class="logo" href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#152b55"/><path d="M44 18h16l28 62H72z" fill="#4ecb9b"/><path d="M40 18h16L28 80H12z" fill="#fff"/><path d="M44 18h16l9 20H53z" fill="#fff"/><path d="M42 43h16v3.5a2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0z" fill="#4ecb9b"/><path d="M50 55l7 7h-4.5v10h-5V62H43z" fill="#4ecb9b"/></svg><span>Adrix<b>HQ</b></span></a>
-    <nav class="nav">
+    <nav class="nav" aria-label="Main">
       <a href="/apps/">Apps</a>
       <a href="/about/">About</a>
       <a href="/support/">Support</a>
     </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="/b2b-pricing/">View app<span class="sr-only">: Adrix B2B Pricing</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
   </div>
 </header>
-<main>
+<main id="main">
 <div class="hero">
   <div class="wrap">
     <span class="eyebrow">HS Duty Check · for Shopify</span>
     <h1>Wrong HS codes cost you <span class="dim">at the border.</span></h1>
     <p class="lede">Since the US ended de minimis, every parcel needs a proper HS code. Shopify uses your codes to estimate duties at checkout, and you pay the difference when the estimate is off. HS Duty Check finds the gaps and helps you close them.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="mailto:hello@adrixhq.com?subject=HS%20Duty%20Check%20early%20access">Request early access <span class="arrow">→</span></a>
+      <a class="btn btn-primary" href="mailto:hello@adrixhq.com?subject=HS%20Duty%20Check%20early%20access">Request early access <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <a class="btn" href="#how">How it works</a>
     </div>
     <div class="term" role="img" aria-label="Example catalog scan result">
@@ -75,12 +77,12 @@
   </div>
 </section>
 
-<section>
+<section class="plain">
   <div class="wrap">
     <div class="callout">
       <h2>Be one of the first stores on it.</h2>
       <p>HS Duty Check is in private testing ahead of its Shopify App Store launch. Tell us about your store and we'll get you in early.</p>
-      <div class="actions"><a class="btn btn-primary" href="mailto:hello@adrixhq.com?subject=HS%20Duty%20Check%20early%20access">Request early access <span class="arrow">→</span></a></div>
+      <div class="actions"><a class="btn btn-primary" href="mailto:hello@adrixhq.com?subject=HS%20Duty%20Check%20early%20access">Request early access <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
     </div>
     <p class="fine">HS Duty Check suggests classifications to help you; it is not a licensed customs broker, and you remain responsible for the codes you declare.</p>
   </div>
@@ -88,14 +90,17 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <span>© 2026 Adrix Studio</span>
-    <nav>
+    <div>
+      <a class="logo" href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#152b55"/><path d="M44 18h16l28 62H72z" fill="#4ecb9b"/><path d="M40 18h16L28 80H12z" fill="#fff"/><path d="M44 18h16l9 20H53z" fill="#fff"/><path d="M42 43h16v3.5a2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0 2 2 0 0 1-4 0z" fill="#4ecb9b"/><path d="M50 55l7 7h-4.5v10h-5V62H43z" fill="#4ecb9b"/></svg><span>Adrix<b>HQ</b></span></a>
+      <span class="copy">© 2026 Adrix Studio</span>
+    </div>
+    <nav aria-label="Footer">
       <a href="/apps/">Apps</a>
       <a href="/about/">About</a>
       <a href="/support/">Support</a>
-      <a href="/privacy/hs-duty-check/">Privacy</a>
-      <a href="mailto:hello@adrixhq.com">hello@adrixhq.com</a>
+      <a href="https://b2b.adrixhq.com/privacy">Privacy</a>
     </nav>
+    <a class="mail" href="mailto:hello@adrixhq.com">hello@adrixhq.com</a>
   </div>
 </footer>
 </body>
