@@ -62,17 +62,21 @@ A product page follows this order (see `b2b-pricing/index.html`):
 7. **FAQ**: `.faq` with `<details>`, 5–8 questions merchants really ask.
 8. **Callout** with the one next action.
 
-## 5. Screens (`.mock`)
+## 5. Screens (`.shot`, `.mock`)
 
-- Until real screenshots exist, screens are HTML mockups built from **the app's real
-  copy**: headings, field labels, help text and button labels copied from the route
-  files in `shopify-apps/apps/<app>/app/routes/`. Never invent a label the app lacks.
-- Numbers inside screens must agree with each other and with the rules the app applies
-  (a group rate beats volume breaks; the list badge summarises the editor's rule).
-- Keep the note "Screens are simplified from the app for this page." under the features
-  while any screen is a mockup. Replace mockups with real screenshots when they exist.
-- No grey placeholder boxes. If a screen needs an image (a product thumbnail), draw a
-  simple inline SVG.
+- App screens are **real screenshots** (`<figure class="shot">`, WebP in the page's `img/`),
+  cropped to the part the row talks about, with an `alt` that says what it shows.
+  - Capture with the app iframe about 800px wide (Chrome window ~1040px): the app switches
+    to its compact layout and text stays legible at column width. Never include the
+    Shopify sidebar or store name.
+  - Shoot on the review/demo store (adrix-b2b-demo) and never save there; a state that
+    needs saved data (warnings) is shot on the QA store and put back afterwards.
+  - Export at most 1200px wide. When the app changes what a screen shows, reshoot it.
+- Copy beside a screenshot must match it: the example names, rates and labels in the text
+  are the ones in the image.
+- `.mock` is only for things that are not the app (the CSV spreadsheet). Keep the note
+  under the features saying the spreadsheet is an illustration while one is on the page.
+- No grey placeholder boxes. If an illustration needs an image, draw a simple inline SVG.
 - A screen must fit its column without horizontal scrolling at 1440px wide.
 
 ## 6. Copy
