@@ -283,6 +283,7 @@ main > section.plain::before { display: none; }
 .faq summary::after { content: "+"; font-family: var(--mono); color: var(--faint); }
 .faq details[open] summary::after { content: "−"; }
 .faq details p { margin: 10px 0 0; }
+.faq a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 2px; }
 
 /* ---------- footer ---------- */
 .site-footer { border-top: 1px solid var(--line); padding: 36px 0 44px; color: var(--muted); font-size: 14.5px; }
@@ -340,7 +341,7 @@ a.app-mini .more { margin-top: 16px; }
 @media (max-width: 860px) { .pains { grid-template-columns: 1fr; } }
 
 .feature { display: grid; grid-template-columns: 1fr 1.15fr; gap: 64px; align-items: center; padding: 56px 0; border-top: 1px solid var(--line); }
-.feature:first-of-type { border-top: 0; padding-top: 8px; }
+.section-head + .feature { border-top: 0; padding-top: 8px; }
 .feature.flip > .copy { order: 2; }
 .feature.wide { grid-template-columns: .8fr 1.5fr; gap: 48px; }
 .feature .copy .label { margin-bottom: 10px; }
@@ -377,7 +378,7 @@ a.app-mini .more { margin-top: 16px; }
 .mtable a { color: #005bd3; text-decoration: none; }
 /* Columns the app itself drops on a phone. */
 @media (max-width: 760px) { .mtable .m-wide { display: none; } }
-.mbadge { display: inline-block; border-radius: 8px; padding: 1px 8px; font-size: 12px; background: #e3e3e3; color: #4a4a4a; }
+.mbadge { display: inline-block; border-radius: 8px; padding: 1px 8px; font-size: 12px; background: #e3e3e3; color: #4a4a4a; white-space: nowrap; }
 .mbadge.ok { background: #cdfee1; color: #0c5132; }
 .mbanner { border-radius: 10px; padding: 10px 12px; display: grid; gap: 4px; font-size: 12.5px; }
 .mbanner b { font-weight: 650; }
